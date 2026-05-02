@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_page_elements_page_title_with_images",
+  "info": {
+    "displayName": "pageTitleWithImage",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

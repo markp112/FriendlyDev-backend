@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_elements_paragraph_with_lists",
+  "info": {
+    "displayName": "paragraphWithList",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "listItems": {
+      "type": "component",
+      "component": "page-elements.list-element",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

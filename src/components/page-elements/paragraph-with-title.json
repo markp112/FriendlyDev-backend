@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_page_elements_paragraph_with_titles",
+  "info": {
+    "displayName": "paragraphWithTitle",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

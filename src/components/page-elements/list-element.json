@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_elements_list_elements",
+  "info": {
+    "displayName": "listElement",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
