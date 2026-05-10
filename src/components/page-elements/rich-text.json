@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_elements_rich_texts",
+  "info": {
+    "displayName": "richText",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

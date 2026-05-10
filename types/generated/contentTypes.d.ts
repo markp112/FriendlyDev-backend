@@ -473,13 +473,22 @@ export interface ApiFrenchBlogFrenchBlog extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    body: Schema.Attribute.RichText & Schema.Attribute.Required;
+    category: Schema.Attribute.Enumeration<['Grammar', 'Vocabulary']>;
+    content: Schema.Attribute.DynamicZone<
+      [
+        'grammar.pronoun-table',
+        'grammar.pronoun-row',
+        'page-elements.rich-text',
+        'page-elements.paragraph-with-list',
+        'page-elements.paragraph-with-title',
+        'page-elements.image-with-caption',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.DateTime;
     excerpt: Schema.Attribute.String;
-    HeadingSection: Schema.Attribute.Component<'page-elements.hero', false>;
     image: Schema.Attribute.Media<'images' | 'files'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

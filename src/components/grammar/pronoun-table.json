@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_grammar_pronoun_tables",
+  "info": {
+    "displayName": "pronoun-table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "component",
+      "component": "grammar.pronoun-row",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

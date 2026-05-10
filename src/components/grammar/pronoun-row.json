@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_grammar_pronoun_rows",
+  "info": {
+    "displayName": "pronoun-row",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "translation": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "blocks"
+    },
+    "cod": {
+      "type": "blocks"
+    },
+    "coi": {
+      "type": "blocks"
+    },
+    "stressed": {
+      "type": "blocks"
+    },
+    "reflexive": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

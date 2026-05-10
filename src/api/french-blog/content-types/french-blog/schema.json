@@ -22,10 +22,6 @@
     "excerpt": {
       "type": "string"
     },
-    "body": {
-      "type": "richtext",
-      "required": true
-    },
     "date": {
       "type": "datetime"
     },
@@ -37,10 +33,23 @@
         "files"
       ]
     },
-    "HeadingSection": {
-      "type": "component",
-      "component": "page-elements.hero",
-      "repeatable": false
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "grammar.pronoun-table",
+        "grammar.pronoun-row",
+        "page-elements.rich-text",
+        "page-elements.paragraph-with-list",
+        "page-elements.paragraph-with-title",
+        "page-elements.image-with-caption"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Grammar",
+        "Vocabulary"
+      ]
     }
   }
 }

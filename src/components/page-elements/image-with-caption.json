@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_page_elements_image_with_captions",
+  "info": {
+    "displayName": "imageWithCaption",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "caption": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

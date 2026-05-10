@@ -1,5 +1,34 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface GrammarPronounRow extends Struct.ComponentSchema {
+  collectionName: 'components_grammar_pronoun_rows';
+  info: {
+    displayName: 'pronoun-row';
+    icon: 'plus';
+  };
+  attributes: {
+    category: Schema.Attribute.String & Schema.Attribute.Required;
+    cod: Schema.Attribute.Blocks;
+    coi: Schema.Attribute.Blocks;
+    reflexive: Schema.Attribute.Blocks;
+    stressed: Schema.Attribute.Blocks;
+    subject: Schema.Attribute.Blocks;
+    translation: Schema.Attribute.String;
+  };
+}
+
+export interface GrammarPronounTable extends Struct.ComponentSchema {
+  collectionName: 'components_grammar_pronoun_tables';
+  info: {
+    displayName: 'pronoun-table';
+    icon: 'apps';
+  };
+  attributes: {
+    rows: Schema.Attribute.Component<'grammar.pronoun-row', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface PageElementsHero extends Struct.ComponentSchema {
   collectionName: 'components_page_elements_heroes';
   info: {
@@ -10,6 +39,18 @@ export interface PageElementsHero extends Struct.ComponentSchema {
     Description: Schema.Attribute.Blocks;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageElementsImageWithCaption extends Struct.ComponentSchema {
+  collectionName: 'components_page_elements_image_with_captions';
+  info: {
+    displayName: 'imageWithCaption';
+    icon: 'landscape';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -73,15 +114,30 @@ export interface PageElementsParagraphWithTitle extends Struct.ComponentSchema {
   };
 }
 
+export interface PageElementsRichText extends Struct.ComponentSchema {
+  collectionName: 'components_page_elements_rich_texts';
+  info: {
+    displayName: 'richText';
+    icon: 'brush';
+  };
+  attributes: {
+    text: Schema.Attribute.Blocks;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'grammar.pronoun-row': GrammarPronounRow;
+      'grammar.pronoun-table': GrammarPronounTable;
       'page-elements.hero': PageElementsHero;
+      'page-elements.image-with-caption': PageElementsImageWithCaption;
       'page-elements.list-element': PageElementsListElement;
       'page-elements.page-content-list-element': PageElementsPageContentListElement;
       'page-elements.page-title-with-image': PageElementsPageTitleWithImage;
       'page-elements.paragraph-with-list': PageElementsParagraphWithList;
       'page-elements.paragraph-with-title': PageElementsParagraphWithTitle;
+      'page-elements.rich-text': PageElementsRichText;
     }
   }
 }
